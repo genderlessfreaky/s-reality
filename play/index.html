@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-Reality — jogar</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #090a14; overflow: hidden; }
+  canvas#game { display: block; width: 100vw; height: 100vh; outline: none; }
+  #start { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+           background: #090a14; color: #dfe2ea; font-family: Consolas, "DejaVu Sans Mono", monospace; cursor: pointer; z-index: 2; text-align: center; padding: 16px; }
+  #start b { color: #f2bd7a; font-size: 22px; letter-spacing: .2em; }
+  #start span { color: #7d8399; margin-top: 14px; font-size: 14px; max-width: 520px; line-height: 1.6; }
+  #err { color: #f28a7a; }
+</style>
+</head>
+<body>
+<canvas id="game" tabindex="0"></canvas>
+<div id="start"><b>▶ CLIQUE PARA JOGAR</b><span id="msg">carregando…</span></div>
+<script type="module">
+  import init from "./s_reality.js";
+  const start = document.getElementById("start");
+  const msg = document.getElementById("msg");
+  const gl = document.createElement("canvas").getContext("webgl2");
+  if (!gl) {
+    msg.innerHTML = '<span id="err">Seu navegador não suporta WebGL2.</span><br>Use Chrome, Edge ou Firefox atualizados, ou baixe a versão para Windows.';
+  } else {
+    msg.textContent = "use fones de ouvido · Esc solta o mouse e abre o menu";
+    start.addEventListener("click", async () => {
+      msg.textContent = "carregando…";
+      try {
+        if (document.documentElement.requestFullscreen) document.documentElement.requestFullscreen().catch(() => {});
+        start.style.display = "none";
+        document.getElementById("game").focus();
+        await init();
+      } catch (e) {
+        if (String(e).includes("Using exceptions for control flow")) return;
+        start.style.display = "flex";
+        msg.innerHTML = '<span id="err">Erro ao iniciar: ' + e + '</span>';
+        console.error(e);
+      }
+    }, { once: true });
+  }
+</script>
+</body>
+</html>
