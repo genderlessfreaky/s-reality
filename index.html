@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>S-Reality</title>
+<meta name="description" content="S-Reality — um mundo infinito desenhado em caracteres. Siga seus instintos.">
+<meta property="og:title" content="S-Reality">
+<meta property="og:description" content="Um mundo infinito desenhado em caracteres. Siga seus instintos.">
+<meta property="og:image" content="img/s1.jpg">
+<style>
+  :root {
+    --bg: #090a14;
+    --panel: #0f1120;
+    --line: #262a40;
+    --text: #dfe2ea;
+    --dim: #7d8399;
+    --accent: #f2bd7a;
+    --green: #8fd1a6;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); }
+  body { font-family: Consolas, "Cascadia Mono", "Courier New", monospace; line-height: 1.55; }
+  a { color: var(--accent); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+  header { position: relative; min-height: 88vh; display: flex; align-items: flex-end; overflow: hidden; border-bottom: 1px solid var(--line); }
+  header img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .55; }
+  header::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(9,10,20,.1), rgba(9,10,20,.95) 92%); }
+  .hero { position: relative; z-index: 1; padding: 0 0 56px; }
+  pre.logo { margin: 0 0 18px; color: var(--text); font-size: clamp(7px, 1.6vw, 15px); line-height: 1.05; text-shadow: 0 0 18px rgba(242,189,122,.25); overflow: hidden; }
+  .tag { color: var(--dim); font-size: 18px; margin: 0 0 28px; }
+  .btn { display: inline-block; padding: 14px 26px; border: 1px solid var(--accent); color: var(--bg); background: var(--accent); text-decoration: none; font-weight: bold; letter-spacing: .04em; }
+  .btn:hover { filter: brightness(1.1); }
+  .btn.ghost { background: transparent; color: var(--accent); margin-left: 10px; }
+  .meta { color: var(--dim); font-size: 13px; margin-top: 14px; }
+  section { padding: 64px 0; border-bottom: 1px solid var(--line); }
+  h2 { font-size: 15px; letter-spacing: .25em; color: var(--accent); margin: 0 0 24px; font-weight: normal; }
+  h2::before { content: "── "; color: var(--dim); }
+  p.lead { font-size: 18px; max-width: 720px; margin: 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
+  .grid img { width: 100%; display: block; border: 1px solid var(--line); aspect-ratio: 16/9; object-fit: cover; }
+  .feat { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+  .card { background: var(--panel); border: 1px solid var(--line); padding: 18px; }
+  .card b { color: var(--green); display: block; margin-bottom: 6px; font-weight: normal; }
+  .card span { color: var(--dim); font-size: 14px; }
+  table { border-collapse: collapse; width: 100%; max-width: 640px; font-size: 14px; }
+  td { padding: 6px 10px; border-bottom: 1px solid var(--line); }
+  td:first-child { color: var(--dim); }
+  td:nth-child(2), td:nth-child(3) { color: var(--text); white-space: nowrap; }
+  ol { padding-left: 20px; max-width: 720px; }
+  li { margin-bottom: 8px; }
+  footer { padding: 36px 0 60px; color: var(--dim); font-size: 13px; }
+  @media (max-width: 560px) { .btn.ghost { margin: 10px 0 0; } .tag { font-size: 16px; } }
+</style>
+</head>
+<body>
+<header>
+  <img src="img/s1.jpg" alt="">
+  <div class="wrap hero">
+<pre class="logo"> ███ ████  ███  ███  █    ███ ███ ███ █   █
+█    █   █ █   █   █ █     █   █   █   █ █
+ ██  ████  ██  █████ █     █   █   █    █
+   █ █  █  █   █   █ █     █   █   █    █
+███  █   █ ███ █   █ ███  ███  █   █    █</pre>
+    <p class="tag">Terra, 1996. Uma segunda-feira qualquer.<br>E então, grama.</p>
+    <a class="btn" id="dl" href="https://github.com/genderlessfreaky/s-reality/releases/latest/download/S-Reality-windows.zip">▼ BAIXAR PARA WINDOWS</a>
+    <a class="btn ghost" href="#como">como jogar</a>
+    <p class="meta">versão de teste · Windows 10/11 · ~2 MB · grátis</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>O QUE É</h2>
+    <p class="lead">S-Reality é um jogo de exploração e sobrevivência desenhado inteiramente com caracteres. Um mundo infinito, calmo e bonito — com portas escondidas para lugares que não deveriam existir. Siga seus instintos.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>IMAGENS</h2>
+    <div class="grid">
+      <img src="img/s2.jpg" alt="figueira gigante" loading="lazy">
+      <img src="img/s3.jpg" alt="floresta" loading="lazy">
+      <img src="img/s4.jpg" alt="a transição" loading="lazy">
+      <img src="img/s5.jpg" alt="sequoia milenar" loading="lazy">
+      <img src="img/s6.jpg" alt="statues level" loading="lazy">
+      <img src="img/s8.jpg" alt="claustrophobia level" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>NO MUNDO</h2>
+    <div class="feat">
+      <div class="card"><b>Overworld infinito</b><span>Prados, florestas, lagos e árvores milenares, gerados sem fim.</span></div>
+      <div class="card"><b>Grama viva</b><span>Cada folha balança com o vento e se abre quando você passa.</span></div>
+      <div class="card"><b>Três câmeras</b><span>Primeira pessoa, sobre o ombro ou vista de cima — troque a qualquer momento.</span></div>
+      <div class="card"><b>Sobreviver</b><span>Fome, sede e energia. Colete, crie fogueiras, construa sua casa.</span></div>
+      <div class="card"><b>Mundos Ocultos</b><span>Evening Forest, Claustrophobia, Statues… cada um com sua regra.</span></div>
+      <div class="card"><b>Som procedural</b><span>Vento, chuva, pássaros e trilha gerados em tempo real.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="como">
+  <div class="wrap">
+    <h2>COMO JOGAR</h2>
+    <ol>
+      <li>Clique em <b>Baixar para Windows</b> e extraia o <code>.zip</code>.</li>
+      <li>Abra <code>S-Reality.exe</code>. Se o Windows mostrar “O Windows protegeu o computador”, clique em <b>Mais informações → Executar assim mesmo</b> (o jogo ainda não tem assinatura digital).</li>
+      <li>Use fones de ouvido. O resto, descubra sozinho.</li>
+    </ol>
+    <br>
+    <table>
+      <tr><td>mover</td><td>WASD</td><td>analógico esq.</td></tr>
+      <tr><td>olhar</td><td>mouse</td><td>analógico dir.</td></tr>
+      <tr><td>correr</td><td>Shift</td><td>B</td></tr>
+      <tr><td>interagir</td><td>E</td><td>A</td></tr>
+      <tr><td>trocar câmera</td><td>V</td><td>Select</td></tr>
+      <tr><td>menu / controles</td><td>Esc</td><td>Start</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">S-Reality © 2026 genderlessfreaky · todos os direitos reservados · versão de teste, pode conter bugs.</div>
+</footer>
+</body>
+</html>
